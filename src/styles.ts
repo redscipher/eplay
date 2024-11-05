@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 const cores = {
   verde: '#10AC84',
@@ -29,15 +29,5 @@ const GlobalCSS = createGlobalStyle`
   }
 `
 
-const Tag = styled.div`
-  width: 148px;
-  height: 35px;
-  top: 228px;
-  left: 179px;
-  gap: 0px;
-  border-radius: 8px 0px 0px 0px;
-  opacity: 0px;
-`
-
 export default GlobalCSS
-export { cores, Tag }
+export { cores }
