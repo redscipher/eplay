@@ -10,6 +10,7 @@ import zelda from '../../assets/images/zelda.png'
 
 const promocoes: Game[] = [
   {
+    id: 1,
     categoria: 'Ação',
     descricao:
       'Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
@@ -19,6 +20,7 @@ const promocoes: Game[] = [
     title: 'Resident Evil 4 - Remake'
   },
   {
+    id: 2,
     categoria: 'Esporte',
     descricao:
       'EA SPORTS™ FIFA 23 traz o Jogo de Todo Mundo aos gramados com a tecnologia HyperMotion2...',
@@ -28,6 +30,7 @@ const promocoes: Game[] = [
     title: 'FIFA 23'
   },
   {
+    id: 3,
     categoria: 'RPG',
     descricao:
       'Diablo IV é um RPG de ação em desenvolvimento pela Blizzard Entertainment.',
@@ -37,6 +40,7 @@ const promocoes: Game[] = [
     title: 'Nome do jogo'
   },
   {
+    id: 4,
     categoria: 'Aventura',
     descricao:
       'Star Wars Jedi: Survivor é um próximo jogo de ação e aventura desenvolvido pela Respawn...',
@@ -49,6 +53,7 @@ const promocoes: Game[] = [
 
 const em_breve: Game[] = [
   {
+    id: 1,
     categoria: 'Luta',
     descricao:
       'Street Fighter 6 é um próximo jogo de luta desenvolvido e publicado pela Capcom.',
@@ -58,6 +63,7 @@ const em_breve: Game[] = [
     title: 'Street Fighter 6'
   },
   {
+    id: 2,
     categoria: 'RPG',
     descricao:
       'Uma aventura épica pela terra e pelos céus de Hyrule aguarda em The Legend of Zelda™...',
