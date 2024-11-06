@@ -1,13 +1,12 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Banner from './components/Banner'
 import Header from './components/Header'
 import GlobalCSS from './styles'
-import path from 'path'
+import Home from './pages/Home'
 
 const rotas = createBrowserRouter([
   {
     path: '/',
-    element: <Banner></Banner>
+    element: <Home></Home>
   }
 ])
 
