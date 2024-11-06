@@ -4,7 +4,9 @@ const cores = {
   verde: '#10AC84',
   preta: '#111111',
   branca: '#EEEEEE',
-  cinza: '#333'
+  cinza: '#333',
+  branco_puro: '#fff',
+  cinza_claro: '#A3A3A3'
 }
 
 const GlobalCSS = createGlobalStyle`
