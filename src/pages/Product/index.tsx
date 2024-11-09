@@ -2,6 +2,7 @@
 import Hero from '../../components/Hero'
 import Section from '../../components/Section'
 import Gallery from '../../components/Gallery'
+import resident from '../../assets/images/resident.png'
 
 const Product = () => {
   // const { id } = useParams()
@@ -34,7 +35,7 @@ const Product = () => {
           de áudio e legendas podem ser ajustadas nas configurações do jogo.
         </p>
       </Section>
-      <Gallery></Gallery>
+      <Gallery defaultCover={resident} name="Jogo teste"></Gallery>
     </>
   )
 }

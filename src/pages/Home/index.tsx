@@ -7,6 +7,7 @@ import fifa from '../../assets/images/fifa.png'
 import star_wars from '../../assets/images/star_wars.png'
 import street_fighter from '../../assets/images/street_fighter.png'
 import zelda from '../../assets/images/zelda.png'
+// import { useState } from 'react'
 
 const promocoes: Game[] = [
   {
@@ -51,7 +52,7 @@ const promocoes: Game[] = [
   }
 ]
 
-const em_breve: Game[] = [
+const emBreve: Game[] = [
   {
     id: 1,
     categoria: 'Luta',
@@ -74,7 +75,14 @@ const em_breve: Game[] = [
   }
 ]
 
+// type GameInfo = {
+
+// }
+
 const Home = () => {
+  // const [promocoes, setPromocoes] = useState([])
+  // const [emBreve, setEmBreve] = useState([])
+
   return (
     <>
       <Banner></Banner>
@@ -86,7 +94,7 @@ const Home = () => {
       <ProductsList
         title={'Em breve'}
         background={'black'}
-        games={em_breve}
+        games={emBreve}
       ></ProductsList>
     </>
   )
