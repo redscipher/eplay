@@ -1,20 +1,26 @@
+import { Game } from '../../pages/Home'
 import Button from '../Button'
+import { formataPreco } from '../ProductList'
 import Tag from '../Tag'
 import Banner, { Infos } from './styles'
 
-const Hero = () => {
+type Props = {
+  game: Game
+}
+
+const Hero = ({ game }: Props) => {
   return (
-    <Banner>
+    <Banner url={game.media.cover}>
       <div className="container">
         <div>
-          <Tag>RPG</Tag>
-          <Tag>PS5</Tag>
+          <Tag>{game.details.category}</Tag>
+          <Tag>{game.details.system}</Tag>
         </div>
         <Infos>
-          <h2>Hogwarts Legacy</h2>
+          <h2>{game.name}</h2>
           <p>
-            <span>De R$ 250,00</span>
-            Por R$ 190,00
+            <span>De {formataPreco(game.prices.old)}</span>
+            Por {formataPreco(game.prices.current)}
           </p>
           <Button
             type="button"

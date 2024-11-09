@@ -7,37 +7,19 @@ import fechar from '../../assets/images/fechar.png'
 
 import Items, { Action, Item, Modal, ModalContent } from './styles'
 import { useState } from 'react'
-
-interface GalleryItem {
-  type: 'image' | 'video'
-  url: string
-}
+import { GalleryItem } from '../../pages/Home'
 
 type Props = {
   defaultCover: string
   name: string
+  items: GalleryItem[]
 }
-
-const mock: GalleryItem[] = [
-  {
-    type: 'image',
-    url: homem_aranha
-  },
-  {
-    type: 'image',
-    url: hogwarts
-  },
-  {
-    type: 'video',
-    url: 'https://www.youtube.com/embed/uHGShqcAHlQ?si=hOXZFZ_yemKUhsKD'
-  }
-]
 
 interface ModalState extends GalleryItem {
   isVisible: boolean
 }
 
-const Gallery = ({ defaultCover, name }: Props) => {
+const Gallery = ({ defaultCover, name, items }: Props) => {
   const [modal, setModal] = useState<ModalState>({
     isVisible: false,
     type: 'image',
@@ -66,7 +48,7 @@ const Gallery = ({ defaultCover, name }: Props) => {
     <>
       <Section title="Galeria" background="black">
         <Items>
-          {mock.map((i, ind) => (
+          {items.map((i, ind) => (
             <Item
               key={i.url}
               onClick={() =>

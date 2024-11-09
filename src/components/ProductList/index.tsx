@@ -1,4 +1,4 @@
-import Game from '../../models/Games'
+import { Game } from '../../pages/Home'
 import Product from '../Product'
 import * as E from './styles'
 
@@ -8,7 +8,32 @@ type Props = {
   games: Game[]
 }
 
+const formataPreco = (preco = 0) => {
+  return new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  }).format(preco)
+}
+
 const ProductsList = ({ title, background, games }: Props) => {
+  const getGameTags = (game: Game) => {
+    const tags = []
+
+    if (game.release_date) {
+      tags.push(game.release_date)
+    }
+
+    if (game.prices.discount) {
+      tags.push(`${game.prices.discount}%`)
+    }
+
+    if (game.prices.current) {
+      tags.push(formataPreco(game.prices.current))
+    }
+
+    return tags
+  }
+
   return (
     <E.Container background={background}>
       <div className="container">
@@ -17,13 +42,13 @@ const ProductsList = ({ title, background, games }: Props) => {
           {games.map((jogo) => {
             return (
               <Product
-                key={jogo.title}
-                title={jogo.title}
-                category={jogo.categoria}
-                system={jogo.system}
-                description={jogo.descricao}
-                infos={jogo.infos}
-                image={jogo.image}
+                key={jogo.name}
+                title={jogo.name}
+                category={jogo.details.category}
+                system={jogo.details.system}
+                description={jogo.description}
+                infos={getGameTags(jogo)}
+                image={jogo.media.thumbnail}
               ></Product>
             )
           })}
@@ -35,3 +60,4 @@ const ProductsList = ({ title, background, games }: Props) => {
 
 export default ProductsList
 export type { Props }
+export { formataPreco }

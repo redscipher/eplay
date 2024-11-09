@@ -3,12 +3,16 @@ import banner from '../../assets/images/fundo_hogwarts.png'
 import { cores } from '../../styles'
 import TagContainer from '../Tag/styles'
 
-const Banner = styled.div`
+type Props = {
+  url: string
+}
+
+const Banner = styled.div<Props>`
   display: block;
   height: 480px;
   width: 100%;
 
-  background-image: url(${banner});
+  background-image: url(${(props) => props.url});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
