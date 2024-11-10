@@ -34,7 +34,7 @@ const Hero = ({ game }: Props) => {
             >
               Adicionar ao carrinho
             </Button>
-            )}
+          )}
         </Infos>
       </div>
     </Banner>
