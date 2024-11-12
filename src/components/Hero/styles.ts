@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import banner from '../../assets/images/fundo_hogwarts.png'
-import { cores } from '../../styles'
+import { breakpoint, cores } from '../../styles'
 import TagContainer from '../Tag/styles'
 
 type Props = {
@@ -43,6 +43,10 @@ const Banner = styled.div<Props>`
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
+  }
+
+  @media (max-width: ${breakpoint.tablet}) {
+    background-size: cover;
   }
 `
 

@@ -27,26 +27,31 @@ const Categories = () => {
           title={'Ação'}
           background={'gray'}
           games={gamesAcao}
+          id="acao"
         ></ProductsList>
         <ProductsList
           title={'Esportes'}
           background={'black'}
           games={gamesEsportes}
+          id="esportes"
         ></ProductsList>
         <ProductsList
           title={'Simulação'}
           background={'gray'}
           games={gamesSimulacao}
+          id="simulacao"
         ></ProductsList>
         <ProductsList
           title={'Luta'}
           background={'black'}
           games={gamesLuta}
+          id="luta"
         ></ProductsList>
         <ProductsList
           title={'RPG'}
           background={'gray'}
           games={gamesRPG}
+          id="RPG"
         ></ProductsList>
       </>
     )

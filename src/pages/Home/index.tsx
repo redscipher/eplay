@@ -45,11 +45,13 @@ const Home = () => {
           title={'Promoções'}
           background={'gray'}
           games={promocoes}
+          id="on-sale"
         ></ProductsList>
         <ProductsList
           title={'Em breve'}
           background={'black'}
           games={emBreve}
+          id="coming-soon"
         ></ProductsList>
       </>
     )
