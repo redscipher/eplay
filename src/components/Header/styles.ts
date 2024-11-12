@@ -31,7 +31,7 @@ const LinkItem = styled.li`
   margin-right: 16px;
 `
 
-const LinkCart = styled.a`
+const CartButton = styled.a`
   display: flex;
 
   img {
@@ -40,4 +40,4 @@ const LinkCart = styled.a`
 `
 
 export default HeaderBar
-export { Links, LinkItem, LinkCart }
+export { Links, LinkItem, CartButton }
