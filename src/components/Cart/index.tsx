@@ -17,6 +17,7 @@ const Cart = () => {
 
   const getTotalPrice = () => {
     return items.reduce((soma, valorAtual) => {
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       return (soma += valorAtual.prices.current!)
     }, 0)
   }
@@ -30,7 +31,7 @@ const Cart = () => {
       <E.default onClick={closeCart} />
       <E.SideBar>
         <ul>
-          {items.map((item, ind) => {
+          {items.map((item) => {
             return (
               <E.CartItem key={item.id}>
                 <img src={item.media.thumbnail} alt={item.name} />

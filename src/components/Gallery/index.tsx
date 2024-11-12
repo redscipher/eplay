@@ -1,6 +1,4 @@
 import Section from '../Section'
-import homem_aranha from '../../assets/images/banner-homem-aranha.png'
-import hogwarts from '../../assets/images/fundo_hogwarts.png'
 import zoom from '../../assets/images/mais-zoom1.png'
 import play from '../../assets/images/play.png'
 import fechar from '../../assets/images/fechar.png'
