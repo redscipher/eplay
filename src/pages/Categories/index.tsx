@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react'
 import ProductsList from '../../components/ProductList'
-import { Game } from '../Home'
 import {
   useGetActionGamesQuery,
   useGetFightGamesQuery,
@@ -10,15 +8,11 @@ import {
 } from '../../services/api'
 
 const Categories = () => {
-  const { data: gamesAcao, isLoading: estaCarregandoAcao } =
-    useGetActionGamesQuery()
-  const { data: gamesEsportes, isLoading: estaCarregandoEsportes } =
-    useGetSportGamesQuery()
-  const { data: gamesSimulacao, isLoading: estaCarregandoSimu } =
-    useGetSimulationGamesQuery()
-  const { data: gamesLuta, isLoading: estaCarregandoLuta } =
-    useGetFightGamesQuery()
-  const { data: gamesRPG, isLoading: estaCarregandoRPG } = useGetRPGGamesQuery()
+  const { data: gamesAcao } = useGetActionGamesQuery()
+  const { data: gamesEsportes } = useGetSportGamesQuery()
+  const { data: gamesSimulacao } = useGetSimulationGamesQuery()
+  const { data: gamesLuta } = useGetFightGamesQuery()
+  const { data: gamesRPG } = useGetRPGGamesQuery()
 
   if (gamesAcao && gamesEsportes && gamesSimulacao && gamesLuta && gamesRPG) {
     return (

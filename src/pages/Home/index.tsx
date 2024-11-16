@@ -1,6 +1,5 @@
 import Banner from '../../components/Banner'
 import ProductsList from '../../components/ProductList'
-import { useEffect, useState } from 'react'
 import { useGetOnSaleQuery, useGetSoonQuery } from '../../services/api'
 
 interface GalleryItem {
@@ -33,9 +32,8 @@ type Game = {
 }
 
 const Home = () => {
-  const { data: promocoes, isLoading: estaCarregandoPromo } =
-    useGetOnSaleQuery()
-  const { data: emBreve, isLoading: estaCarregandoEB } = useGetSoonQuery()
+  const { data: promocoes } = useGetOnSaleQuery()
+  const { data: emBreve } = useGetSoonQuery()
 
   if (promocoes && emBreve) {
     return (

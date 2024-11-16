@@ -2,16 +2,13 @@
 import Hero from '../../components/Hero'
 import Section from '../../components/Section'
 import Gallery from '../../components/Gallery'
-import resident from '../../assets/images/resident.png'
 import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-import { Game } from '../Home'
 import { useGetGameQuery } from '../../services/api'
 
 const Product = () => {
   const { id } = useParams()
 
-  const { data: game, isLoading } = useGetGameQuery(id!)
+  const { data: game } = useGetGameQuery(id as string)
 
   if (!game) {
     return <h3>Carregando...</h3>

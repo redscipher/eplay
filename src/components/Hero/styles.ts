@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import banner from '../../assets/images/fundo_hogwarts.png'
 import { breakpoint, cores } from '../../styles'
 import TagContainer from '../Tag/styles'
 

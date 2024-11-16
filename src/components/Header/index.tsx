@@ -9,6 +9,7 @@ import HeaderBar, {
 import logo from '../../assets/images/logo.svg'
 import carrinho from '../../assets/images/carrinho.svg'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import { open } from '../../store/reducers/cart'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
@@ -40,13 +41,13 @@ const Header = () => {
             </Link>
             <nav>
               <Links>
-                <LinkItem>
+                <LinkItem title="Clique aqui para acessar categorias">
                   <Link to="/categorias">Categorias</Link>
                 </LinkItem>
-                <LinkItem>
+                <LinkItem title="Clique aqui para acessar novidades">
                   <a href="#">Novidades</a>
                 </LinkItem>
-                <LinkItem>
+                <LinkItem title="Clique aqui para acessar promoções">
                   <a href="#">Promoçoes</a>
                 </LinkItem>
               </Links>
@@ -59,14 +60,20 @@ const Header = () => {
         </HeaderRow>
         <NavMobile className={menuOpened ? 'is-open' : ''}>
           <Links>
-            <LinkItem>
-              <Link to="/categorias">Categorias</Link>
+            <LinkItem title="Clique aqui para acessar categorias">
+              <Link to="/categorias" onClick={() => setMenuOpened(false)}>
+                Categorias
+              </Link>
             </LinkItem>
-            <LinkItem>
-              <a href="#">Novidades</a>
+            <LinkItem title="Clique aqui para acessar novidades">
+              <HashLink to="/#coming-soon" onClick={() => setMenuOpened(false)}>
+                Novidades
+              </HashLink>
             </LinkItem>
-            <LinkItem>
-              <a href="#">Promoçoes</a>
+            <LinkItem title="Clique aqui para acessar promoções">
+              <HashLink to="/#on-sale" onClick={() => setMenuOpened(false)}>
+                Promoçoes
+              </HashLink>
             </LinkItem>
           </Links>
         </NavMobile>

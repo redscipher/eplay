@@ -10,16 +10,36 @@ const Footer = () => {
           <E.Titulo>Categorias</E.Titulo>
           <E.Links>
             <li>
-              <E.LinkItem to="/categorias#RPG">RPG</E.LinkItem>
+              <E.LinkItem
+                title="Clique aqui para acessar jogos de RPG"
+                to="/categorias#RPG"
+              >
+                RPG
+              </E.LinkItem>
             </li>
             <li>
-              <E.LinkItem to="/categorias#acao">Ação</E.LinkItem>
+              <E.LinkItem
+                title="Clique aqui para acessar jogos de ação"
+                to="/categorias#acao"
+              >
+                Ação
+              </E.LinkItem>
             </li>
             <li>
-              <E.LinkItem to="/categorias#esportes">Esportes</E.LinkItem>
+              <E.LinkItem
+                title="Clique aqui para acessar jogos de esportes"
+                to="/categorias#esportes"
+              >
+                Esportes
+              </E.LinkItem>
             </li>
             <li>
-              <E.LinkItem to="/categorias#simulacao">Simulação</E.LinkItem>
+              <E.LinkItem
+                title="Clique aqui para acessar jogos de simulação"
+                to="/categorias#simulacao"
+              >
+                Simulação
+              </E.LinkItem>
             </li>
           </E.Links>
         </E.FooterSection>
@@ -27,10 +47,20 @@ const Footer = () => {
           <E.Titulo>Acesso rápido</E.Titulo>
           <E.Links>
             <li>
-              <E.LinkItem to="/#on-sale">Promoções</E.LinkItem>
+              <E.LinkItem
+                title="Clique aqui para acessar promoções"
+                to="/#on-sale"
+              >
+                Promoções
+              </E.LinkItem>
             </li>
             <li>
-              <E.LinkItem to="/#coming-soon">Em breve</E.LinkItem>
+              <E.LinkItem
+                title="Clique aqui para acessar aba em-breve"
+                to="/#coming-soon"
+              >
+                Em breve
+              </E.LinkItem>
             </li>
           </E.Links>
         </E.FooterSection>
