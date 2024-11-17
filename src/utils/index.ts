@@ -1,3 +1,5 @@
+import { Game } from '../pages/Home'
+
 const formataPreco = (preco = 0) => {
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
@@ -5,4 +7,14 @@ const formataPreco = (preco = 0) => {
   }).format(preco)
 }
 
-export { formataPreco }
+const getTotalPrice = (items: Game[]) => {
+  return items.reduce((soma, valorAtual) => {
+    if (valorAtual.prices.current) {
+      return (soma += valorAtual.prices.current)
+    } else {
+      return 0
+    }
+  }, 0)
+}
+
+export { formataPreco, getTotalPrice }

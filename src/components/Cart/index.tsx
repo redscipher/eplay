@@ -4,22 +4,18 @@ import Tag from '../Tag'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 import { close, remove } from '../../store/reducers/cart'
-import { formataPreco } from '../../utils'
+import { formataPreco, getTotalPrice } from '../../utils'
+import { useNavigate } from 'react-router-dom'
 
 const Cart = () => {
   const { isOpen, items } = useSelector((state: RootReducer) => state.cart)
 
   const dispatch = useDispatch()
 
+  const navegar = useNavigate()
+
   const closeCart = () => {
     dispatch(close())
-  }
-
-  const getTotalPrice = () => {
-    return items.reduce((soma, valorAtual) => {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      return (soma += valorAtual.prices.current!)
-    }, 0)
   }
 
   const removeItem = (id: number) => {
@@ -51,12 +47,16 @@ const Cart = () => {
         </ul>
         <E.Quantity>{items.length} jogo(s) no carrinho</E.Quantity>
         <E.Prices>
-          Total de {formataPreco(getTotalPrice())}{' '}
+          Total de {formataPreco(getTotalPrice(items))}{' '}
           <span>Em até 6x sem juros</span>
         </E.Prices>
         <Button
           type={'button'}
           title={'Clique aqui para continuar com a compra'}
+          onClick={() => {
+            navegar('/checkout')
+            closeCart()
+          }}
         >
           Continuar com a compra
         </Button>
